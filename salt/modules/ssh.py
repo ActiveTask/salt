@@ -1165,8 +1165,8 @@ def set_known_host(
             }
 
         if check_required:
-            for key in known_keys:
-                if key in stored_keys:
+            for _key in known_keys:
+                if _key in stored_keys:
                     return {"status": "exists", "keys": stored_keys}
 
     full = _get_known_hosts_file(config=config, user=user)
